@@ -1,21 +1,8 @@
-﻿@model MetricSystem.Models.FahrenheitConversion
-
-<h2>Convert Fahrenheit to Celceius</h2>
-
-<form asp-action="Index" method="post">
-    <!-- Validation errors summary only -->
-    <div asp-validation-summary="All" class="validation-summary-errors" style="color: red; margin-bottom: 1rem;"></div>
-
-    <div style="margin-bottom: 1rem;">
-        <label asp-for="FahrenheitValue" style="display:inline-block; width:150px; text-align:right; margin-right:10px;"></label>
-        <input asp-for="FahrenheitValue" style="width:200px; display:inline-block;" />
-    </div>
-
-    <div style="margin-bottom: 1rem;">
-        <label style="display:inline-block; width:150px; text-align:right; margin-right:10px;">Celceius Value</label>
-        <input value="@(ViewBag.CelsiusValue ?? "")" readonly style="width:200px; display:inline-block; background-color:#f9f9f9; border:1px solid #ccc;" />
-    </div>
-
-    <button type="submit" class="btn btn-primary" style="margin-right:10px;">Convert</button>
-    <button type="submit" asp-action="Clear" class="btn btn-secondary">Clear</button>
-</form>
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+<div class="text-center">
+    <h1 class="display-4">Welcome to the Metric System Converter!</h1>
+    <p class="lead">Use the navigation menu to convert Fahrenheit to Celsius and learn more about the app.</p>
+    <img src="~/images/background.jpg" class="img-fluid rounded" alt="Metric System Background" style="max-width: 400px;">
+</div>
